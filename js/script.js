@@ -16,6 +16,17 @@ function createGrid(dim){
 }
 function colorCell(){
     divContainer.addEventListener('mouseover', (e) => {
-        e.target.style.backgroundColor = "blue";
+        let color = randomColor();
+        e.target.classList.add("gridColor");
+        e.target.style.setProperty('--gridColor', color);
     })
 }
+
+function randomColor() {
+    let hue = Math.floor(Math.random() * 250); //356);
+    let saturation = Math.floor(Math.random() * 250); //80 + 20);
+    let lightnes = Math.floor(Math.random() * 250);//92 + 8);
+    let hslColor = "rgb(" + hue + ", " + saturation + ", " + lightnes + ")";
+    return hslColor;
+}
+
