@@ -10,6 +10,12 @@ function createGrid(dim){
         let gridCell = document.createElement('div');
         gridCell.style.border = ".1px solid black";
         gridCell.style.margin = "0px";
+        gridCell.classList.add("cell");
         divContainer.appendChild(gridCell);
     }
+}
+function colorCell(){
+    divContainer.addEventListener('mouseover', (e) => {
+        e.target.style.backgroundColor = "blue";
+    })
 }
