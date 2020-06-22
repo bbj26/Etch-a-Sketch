@@ -13,8 +13,12 @@
 
     <div id="sketchArea">
         <div id="sketchSettings">
+            <label for="gridDimensionInput">Enter grid dimension: 
+            <input id="gridDimensionInput" type="number"></label>
             <button id="reset" type="reset">Reset grid</button>
-           
+            <label for="toggleGrid">
+                <button id="toggleGrid" onclick="toggleGrid()">Toggle grid</button>
+            </label>
         </div>
 
         <div id="container"></div>

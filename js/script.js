@@ -1,5 +1,6 @@
 const divContainer = document.querySelector('#container');
 const resetBtn = document.querySelector('#reset');
+let gridOnOff = 1;
 
 function createGrid(dim){
     let dimension = dim;
@@ -13,12 +14,17 @@ function createGrid(dim){
         divContainer.appendChild(gridCell);
     }   
     colorCell();
-    
+
     resetBtn.addEventListener('click', function resetGrid() {
         let cells = divContainer.querySelectorAll('.cell');
+        let input = document.querySelector('#gridDimensionInput');
+        let newDim = input.value;
         cells.forEach(element => {
             element.style.setProperty('--gridColor', "white");
+            element.remove();
         });
+        
+        createGrid(newDim);
     })
 }
 
@@ -38,7 +44,21 @@ function randomColor() {
     return hslColor;
 }
 
+function toggleGrid() {
+    let cells = document.querySelectorAll('.cell');
+    if (gridOnOff == 1) {
+    cells.forEach(element => {
+        element.style.border = "none";
+        gridOnOff = 0;
+    })} else {
+        cells.forEach(element => {
+            element.style.border = ".1px solid black";
+            gridOnOff = 1;
+        })
+    };
 
+    
+}
 
 
 
