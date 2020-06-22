@@ -1,6 +1,5 @@
 const divContainer = document.querySelector('#container');
-
-
+const resetBtn = document.querySelector('#reset');
 
 function createGrid(dim){
     let dimension = dim;
@@ -12,8 +11,17 @@ function createGrid(dim){
         gridCell.style.margin = "0px";
         gridCell.classList.add("cell");
         divContainer.appendChild(gridCell);
-    }
+    }   
+    colorCell();
+    
+    resetBtn.addEventListener('click', function resetGrid() {
+        let cells = divContainer.querySelectorAll('.cell');
+        cells.forEach(element => {
+            element.style.setProperty('--gridColor', "white");
+        });
+    })
 }
+
 function colorCell(){
     divContainer.addEventListener('mouseover', (e) => {
         let color = randomColor();
@@ -29,4 +37,8 @@ function randomColor() {
     let hslColor = "rgb(" + hue + ", " + saturation + ", " + lightnes + ")";
     return hslColor;
 }
+
+
+
+
 

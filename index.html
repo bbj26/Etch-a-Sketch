@@ -8,11 +8,18 @@
 </head>
 
 
-<body>
-      <div id="container">
-        
-      </div>  
-      <script src="js/script.js"></script>
+<body onload="createGrid(16)">
+    <header>Etch A Sketch</header>
+
+    <div id="sketchArea">
+        <div id="sketchSettings">
+            <button id="reset" type="reset">Reset grid</button>
+           
+        </div>
+
+        <div id="container"></div>
+    </div>  
+    <script src="js/script.js"></script>
 </body>
 
 
