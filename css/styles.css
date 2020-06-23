@@ -34,6 +34,13 @@ header {
     align-items: center;
 }
 
+#sketchSettings {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 #colorSelector {
     display: flex;
     flex-direction: column;
@@ -45,4 +52,6 @@ header {
     padding: 1em;
     margin: 1em;
     background-color: var(--backgroundColor);
+    border-radius: 50%;
+    color:black;
 }
