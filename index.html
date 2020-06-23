@@ -14,11 +14,17 @@
     <div id="sketchArea">
         <div id="sketchSettings">
             <label for="gridDimensionInput">Enter grid dimension: 
-            <input id="gridDimensionInput" type="number"></label>
+            <input id="gridDimensionInput" type="number" autocomplete="off"></label>
             <button id="reset" type="reset">Reset grid</button>
             <label for="toggleGrid">
                 <button id="toggleGrid" onclick="toggleGrid()">Toggle grid</button>
             </label>
+            <br>
+            <button class="colorBtn" onclick="colorBlue()">blue</button>
+            <button class="colorBtn" onclick="colorRed()">red</button>
+            <button class="colorBtn" onclick="colorGreen()">green</button>
+            <button class="colorBtn" onclick="colorYellow()">yellow</button>
+            <button class="colorBtn" onclick="colorRandom()">random</button>
         </div>
 
         <div id="container"></div>

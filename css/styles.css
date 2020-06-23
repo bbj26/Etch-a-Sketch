@@ -39,3 +39,10 @@ header {
     flex-direction: column;
     align-items: center;
 }
+
+.colorBtn {
+    --backgroundColor: "blue";
+    padding: 1em;
+    margin: 1em;
+    background-color: var(--backgroundColor);
+}
